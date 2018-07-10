@@ -74,6 +74,10 @@ public class Tote implements Comparable<Tote> {
 
     @Override
     public int compareTo( Tote tote ) {
+        if ( tote == null ) {
+            return 1;
+        }
+
         if ( this.getVolume() != tote.getVolume() ) {
             return Integer.compare( tote.getVolume(), this.getVolume() );
         }
